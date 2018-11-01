@@ -18,9 +18,17 @@ public class CDplayerTest {
 
     @Autowired
     private CompactDisc cd;
+    @Autowired
+    private MediaPlayer mp;
 
     @Test
     public void cdShouldNotBeNull() {
+        cd.play();
         assertNotNull(cd);
+    }
+
+    @Test
+    public void checkCDplayer(){
+        logger.info(mp.getClass().toString());
     }
 }
