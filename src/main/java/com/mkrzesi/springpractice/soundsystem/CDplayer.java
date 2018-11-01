@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.springpractice.soundsystem;
+package com.mkrzesi.springpractice.soundsystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
