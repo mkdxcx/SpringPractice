@@ -1,6 +1,5 @@
 package com.mkrzesi.springpractice.soundsystem;
 
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -19,9 +18,6 @@ public class CDplayerTest {
 
     @Autowired
     private CompactDisc cd;
-
-    @Autowired
-    private MediaPlayer player;
 
     @Test
     public void cdShouldNotBeNull() {

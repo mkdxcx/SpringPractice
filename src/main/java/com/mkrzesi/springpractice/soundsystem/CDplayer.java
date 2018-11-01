@@ -10,8 +10,4 @@ public class CDplayer implements MediaPlayer{
     public CDplayer(CompactDisc cd) {
         this.cd = cd;
     }
-
-    public void play(){
-        cd.play();
-    }
 }
