@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CDplayerConfiguration {
 
+    //Beans for CompactDiscs
+
     @Bean(name="sgtPeppers")
     public CompactDisc getCompactDiscBeatles(){
         return new SgtPeppers();
@@ -16,6 +18,8 @@ public class CDplayerConfiguration {
     public CompactDisc getCompactDiscRolling(){
         return new StartMeUp();
     }
+
+    //Beans for cdPlayers
 
     @Bean(name="cdPlayerOne")
     public MediaPlayer getMediaPlayer(){
