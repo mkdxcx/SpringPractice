@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.soundsystem;
+package com.mkrzesi.springpractice.soundsystem.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

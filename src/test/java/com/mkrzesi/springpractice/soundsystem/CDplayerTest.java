@@ -1,6 +1,7 @@
 package com.mkrzesi.springpractice.soundsystem;
 
 
+import com.mkrzesi.springpractice.soundsystem.configuration.CDplayerConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
