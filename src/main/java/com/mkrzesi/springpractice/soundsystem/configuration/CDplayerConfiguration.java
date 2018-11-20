@@ -1,9 +1,36 @@
 package com.mkrzesi.springpractice.soundsystem.configuration;
 
-import org.springframework.context.annotation.ComponentScan;
+import com.mkrzesi.springpractice.soundsystem.*;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.mkrzesi.springpractice.soundsystem")
 public class CDplayerConfiguration {
+
+    @Bean(name="sgtPeppers")
+    public CompactDisc getCompactDiscBeatles(){
+        return new SgtPeppers();
+    }
+
+    @Bean(name="startMeUp")
+    public CompactDisc getCompactDiscRolling(){
+        return new StartMeUp();
+    }
+
+    @Bean(name="cdPlayerOne")
+    public MediaPlayer getMediaPlayer(){
+        return new CDplayer(getCompactDiscBeatles());
+    }
+
+    @Bean(name="cdPlayerTwo")
+    public MediaPlayer getMediaPlayerTwo(CompactDisc cd){
+        return new CDplayer(cd);
+    }
+
+    @Bean(name="cdPlayerThree")
+    public MediaPlayer getMediaPlayerThree(CompactDisc cd){
+        MediaPlayer cdPlayer = new CDplayer(cd);
+        ((CDplayer) cdPlayer).setCD(cd);
+        return cdPlayer;
+    }
 }
