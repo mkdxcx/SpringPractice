@@ -20,6 +20,7 @@ public class CDplayerConfiguration {
     }
 
     //Beans for cdPlayers
+    //Inject by constructor
 
     @Bean(name="cdPlayerOne")
     public MediaPlayer getMediaPlayerOne(){
@@ -33,6 +34,7 @@ public class CDplayerConfiguration {
     public MediaPlayer getMediaPlayerThree(CompactDisc cd){
         return new CDplayer(cd);
     }
+
 
     @Bean(name="cdPlayerFour")
     public MediaPlayer getMediaPlayerFour(CompactDisc cd){
