@@ -22,17 +22,20 @@ public class CDplayerConfiguration {
     //Beans for cdPlayers
 
     @Bean(name="cdPlayerOne")
-    public MediaPlayer getMediaPlayer(){
+    public MediaPlayer getMediaPlayerOne(){
         return new CDplayer(getCompactDiscBeatles());
     }
 
-    @Bean(name="cdPlayerTwo")
-    public MediaPlayer getMediaPlayerTwo(CompactDisc cd){
-        return new CDplayer(cd);
-    }
+    @Bean(name="Rolling")
+    public MediaPlayer getMediaPlayerTwo(){return new CDplayer(getCompactDiscRolling());}
 
     @Bean(name="cdPlayerThree")
     public MediaPlayer getMediaPlayerThree(CompactDisc cd){
+        return new CDplayer(cd);
+    }
+
+    @Bean(name="cdPlayerFour")
+    public MediaPlayer getMediaPlayerFour(CompactDisc cd){
         MediaPlayer cdPlayer = new CDplayer(cd);
         ((CDplayer) cdPlayer).setCD(cd);
         return cdPlayer;
