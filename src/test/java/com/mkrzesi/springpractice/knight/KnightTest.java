@@ -1,7 +1,5 @@
 package com.mkrzesi.springpractice.knight;
 
-import com.mkrzesi.knight.BraveKnight;
-import com.mkrzesi.knight.Quest;
 import org.junit.Test;
 
 import static org.mockito.Mockito.mock;

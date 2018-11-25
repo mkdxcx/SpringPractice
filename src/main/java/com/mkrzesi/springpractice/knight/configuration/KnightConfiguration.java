@@ -1,9 +1,9 @@
-package com.mkrzesi.knight.configuration;
+package com.mkrzesi.springpractice.knight.configuration;
 
-import com.mkrzesi.knight.BraveKnight;
-import com.mkrzesi.knight.KillDragonQuest;
-import com.mkrzesi.knight.Knight;
-import com.mkrzesi.knight.Quest;
+import com.mkrzesi.springpractice.knight.BraveKnight;
+import com.mkrzesi.springpractice.knight.KillDragonQuest;
+import com.mkrzesi.springpractice.knight.Knight;
+import com.mkrzesi.springpractice.knight.Quest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
