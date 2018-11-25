@@ -1,8 +1,6 @@
 package com.mkrzesi.springpractice.soundsystem.configuration;
 
-import com.mkrzesi.springpractice.soundsystem.CompactDisc;
-import com.mkrzesi.springpractice.soundsystem.SgtPeppers;
-import com.mkrzesi.springpractice.soundsystem.StartMeUp;
+import com.mkrzesi.springpractice.soundsystem.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,4 +16,10 @@ public class CDplayerConfiguration {
     public CompactDisc startMeUp(){
         return new StartMeUp();
     }
+
+    @Bean
+    public MediaPlayer cdPlayerWithSgtPeppers(){return new CDplayer(sgtPeppers()); }
+
+    @Bean
+    public MediaPlayer cdPlayerWithStartMeUp(){return new CDplayer(startMeUp());}
 }

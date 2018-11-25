@@ -1,6 +1,5 @@
 package com.mkrzesi.springpractice.soundsystem;
 
-
 import com.mkrzesi.springpractice.soundsystem.configuration.CDplayerConfiguration;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -15,4 +14,5 @@ public class CDplayerTest {
    Logger logger = LoggerFactory.getLogger(getClass());
 
 }
+
 

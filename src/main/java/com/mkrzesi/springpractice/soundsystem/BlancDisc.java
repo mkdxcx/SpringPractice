@@ -1,3 +1,4 @@
+/*
 package com.mkrzesi.springpractice.soundsystem;
 
 import org.slf4j.Logger;
@@ -29,3 +30,4 @@ public class BlancDisc implements CompactDisc {
         }
     }
 }
+*/
