@@ -1,22 +1,29 @@
 package com.mkrzesi.springpractice.knight.configuration;
 
-import com.mkrzesi.springpractice.knight.BraveKnight;
-import com.mkrzesi.springpractice.knight.KillDragonQuest;
-import com.mkrzesi.springpractice.knight.Knight;
-import com.mkrzesi.springpractice.knight.Quest;
+import com.mkrzesi.springpractice.knight.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class KnightConfiguration {
 
-    @Bean(name = "knight")
-    public Knight knight(){
-        return new BraveKnight(quest());
+    @Bean
+    public Knight braveKnight() {
+        return new BraveKnight(braveQuest());
     }
 
-    @Bean(name = "quest")
-    public Quest quest(){
+    @Bean
+    public Knight cowardKnight() {
+        return new CowardKnight(cowardQuest());
+    }
+
+    /*---------------------------------------------------------*/
+
+    @Bean
+    public Quest braveQuest() {
         return new KillDragonQuest();
     }
+
+    @Bean
+    public Quest cowardQuest(){return new CowardQuest();}
 }
