@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component("StartMeUp")
+//@Component("StartMeUp")
 public class StartMeUp implements CompactDisc {
 
     Logger logger = LoggerFactory.getLogger(getClass());
