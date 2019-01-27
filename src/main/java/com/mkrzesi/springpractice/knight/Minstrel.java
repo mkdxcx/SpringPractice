@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.knight.aspects;
+package com.mkrzesi.springpractice.knight;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

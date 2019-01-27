@@ -1,7 +1,7 @@
 package com.mkrzesi.springpractice.knight.configuration;
 
 import com.mkrzesi.springpractice.knight.*;
-import com.mkrzesi.springpractice.knight.aspects.Minstrel;
+import com.mkrzesi.springpractice.knight.Minstrel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
