@@ -8,11 +8,17 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
+
         ApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\knight\\configuration\\");
-        Knight braveKnight = context.getBean(BraveKnight.class);
-        braveKnight.makeQuest();
+        Knight braveKnightOne = context.getBean("braveKnightOne",BraveKnight.class);
+        braveKnightOne.makeQuest();
+
+        Knight braveKnightTwo = context.getBean("braveKnightTwo",BraveKnight.class);
+        braveKnightTwo.makeQuest();
 
         Knight cowardKnight = context.getBean(CowardKnight.class);
         cowardKnight.makeQuest();
+
+        ((AnnotationConfigApplicationContext) context).close();
     }
 }
