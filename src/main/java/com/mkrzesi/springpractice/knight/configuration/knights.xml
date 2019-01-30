@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "braveKnightOne" class="com.mkrzesi.springpractice.knight.BraveKnight">
+        <constructor-arg ref="killTheDragonQuest"/>
+    </bean>
+
+    <bean id="braveKnightTwo" class="com.mkrzesi.springpractice.knight.BraveKnight">
+        <constructor-arg ref="rescueDamselQuest"/>
+    </bean>
+
+    <bean id="cowardKnight" class="com.mkrzesi.springpractice.knight.CowardKnight">
+        <constructor-arg ref="cowardQuest"/>
+    </bean>
+
+    <bean id = "killTheDragonQuest" class="com.mkrzesi.springpractice.knight.KillDragonQuest">
+    </bean>
+
+    <bean id ="rescueDamselQuest" class="com.mkrzesi.springpractice.knight.RescueDamsel">
+    </bean>
+
+    <bean id="cowardQuest" class="com.mkrzesi.springpractice.knight.CowardQuest">
+    </bean>
+</beans>
