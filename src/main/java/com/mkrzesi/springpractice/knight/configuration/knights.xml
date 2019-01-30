@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "braveKnightOne" class="com.mkrzesi.springpractice.knight.BraveKnight">
+    <bean id="braveKnightOne" class="com.mkrzesi.springpractice.knight.BraveKnight">
         <constructor-arg ref="killTheDragonQuest"/>
     </bean>
 
@@ -16,12 +19,23 @@
         <constructor-arg ref="cowardQuest"/>
     </bean>
 
-    <bean id = "killTheDragonQuest" class="com.mkrzesi.springpractice.knight.KillDragonQuest">
+    <bean id="killTheDragonQuest" class="com.mkrzesi.springpractice.knight.KillDragonQuest">
     </bean>
 
-    <bean id ="rescueDamselQuest" class="com.mkrzesi.springpractice.knight.RescueDamsel">
+    <bean id="rescueDamselQuest" class="com.mkrzesi.springpractice.knight.RescueDamsel">
     </bean>
 
     <bean id="cowardQuest" class="com.mkrzesi.springpractice.knight.CowardQuest">
     </bean>
+
+    <bean id="minstrel" class="com.mkrzesi.springpractice.knight.aspects.Minstrel">
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="minstrel">
+            <aop:pointcut id="makeQuest" expression="execution(* *.makeQuest())"/>
+            <aop:before pointcut-ref="makeQuest" method="singBeforeQuest"/>
+            <aop:after pointcut-ref="makeQuest" method="singAfterQuest"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
