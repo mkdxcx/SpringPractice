@@ -30,4 +30,5 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
+	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.7.3'
 }
