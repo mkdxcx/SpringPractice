@@ -1,5 +1,7 @@
 package com.mkrzesi.springpractice.knight;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class BraveKnight implements Knight{
 
     Quest quest;

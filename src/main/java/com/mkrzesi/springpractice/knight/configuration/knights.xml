@@ -8,8 +8,8 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="braveKnightOne" class="com.mkrzesi.springpractice.knight.BraveKnight">
-        <constructor-arg ref="killTheDragonQuest"/>
-    </bean>
+    <constructor-arg ref="killTheDragonQuest"/>
+</bean>
 
     <bean id="braveKnightTwo" class="com.mkrzesi.springpractice.knight.BraveKnight">
         <constructor-arg ref="rescueDamselQuest"/>
@@ -28,14 +28,12 @@
     <bean id="cowardQuest" class="com.mkrzesi.springpractice.knight.CowardQuest">
     </bean>
 
-    <bean id="minstrel" class="com.mkrzesi.springpractice.knight.aspects.Minstrel">
+    <bean id="minstrelAspect" class="com.mkrzesi.springpractice.knight.aspects.Minstrel">
     </bean>
-
     <aop:config>
-        <aop:aspect ref="minstrel">
-            <aop:pointcut id="makeQuest" expression="execution(* *.makeQuest())"/>
-            <aop:before pointcut-ref="makeQuest" method="singBeforeQuest"/>
-            <aop:after pointcut-ref="makeQuest" method="singAfterQuest"/>
+        <aop:aspect ref="minstrelAspect">
+            <aop:pointcut id="makeQuestPointcut" expression="execution(* *.makeQuest(..))"/>
+            <aop:before pointcut-ref="makeQuestPointcut" method="singBeforeQuest"/>
         </aop:aspect>
     </aop:config>
 </beans>
