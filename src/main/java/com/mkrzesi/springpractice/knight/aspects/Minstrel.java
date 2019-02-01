@@ -10,7 +10,7 @@ public class Minstrel {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Before("execution(public void makeQuest())")
+    @Before("execution(src.main.java.com.mkrzesi.springpracitce.knight.*.makeQuest())")
     public void singBeforeQuest(){
         logger.info("Minstrel is singing BEFORE quest");
     }

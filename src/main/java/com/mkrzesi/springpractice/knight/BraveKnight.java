@@ -4,6 +4,7 @@ public class BraveKnight implements Knight{
 
     Quest quest;
 
+
     public BraveKnight(Quest quest){
         this.quest = quest;
     }
