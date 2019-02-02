@@ -31,6 +31,8 @@
     <bean id="minstrelAspect" class="com.mkrzesi.springpractice.knight.aspects.Minstrel">
     </bean>
 
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
     <aop:config>
         <aop:aspect id="myAsp" ref="minstrelAspect">
             <aop:pointcut id="makeQuestPointcut" expression="execution(* com.mkrzesi.springpractice.knight.Knight.makeQuest(..))"/>
