@@ -15,10 +15,10 @@ public class Main {
         Knight braveKnightOne = context.getBean("braveKnightOne", BraveKnight.class);
         braveKnightOne.knightMakeQuest();
 
-        /*Knight braveKnightTwo = context.getBean("braveKnightTwo", BraveKnight.class);
-        braveKnightTwo.makeQuest();
+        Knight braveKnightTwo = context.getBean("braveKnightTwo", BraveKnight.class);
+        braveKnightTwo.knightMakeQuest();
 
         Knight cowardKnight = context.getBean("cowardKnight", CowardKnight.class);
-        cowardKnight.makeQuest();*/
+        cowardKnight.knightMakeQuest();
     }
 }
