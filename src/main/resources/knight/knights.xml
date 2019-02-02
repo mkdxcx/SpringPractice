@@ -33,7 +33,7 @@
 
     <aop:config>
         <aop:aspect id="myAsp" ref="minstrelAspect">
-            <aop:pointcut id="makeQuestPointcut" expression="execution(* *.makeQuest(..))"/>
+            <aop:pointcut id="makeQuestPointcut" expression="execution(* com.mkrzesi.springpractice.knight.Knight.makeQuest(..))"/>
 
             <aop:before pointcut-ref="makeQuestPointcut" method="singBeforeQuest"/>
             <aop:after pointcut-ref="makeQuestPointcut" method="singAfterQuest"/>
