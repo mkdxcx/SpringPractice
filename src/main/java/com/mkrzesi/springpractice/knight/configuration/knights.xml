@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <aop:aspectj-autoproxy/>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <bean id="braveKnightOne" class="com.mkrzesi.springpractice.knight.BraveKnight">
     <constructor-arg ref="killTheDragonQuest"/>
@@ -34,7 +34,6 @@
     <aop:config>
         <aop:aspect id="myAsp" ref="minstrelAspect">
             <aop:pointcut id="makeQuestPointcut" expression="execution(* *.makeQuest(..))"/>
-
             <aop:before pointcut-ref="makeQuestPointcut" method="singBeforeQuest"/>
             <aop:after pointcut-ref="makeQuestPointcut" method="singAfterQuest"/>
         </aop:aspect>
