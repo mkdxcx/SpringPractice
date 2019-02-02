@@ -9,7 +9,7 @@ public class BraveKnight implements Knight{
     }
 
     @Override
-    public void makeQuest() {
+    public void knightMakeQuest() {
         quest.makeQuest();
     }
 }

@@ -13,12 +13,12 @@ public class Main {
         ApplicationContext context = new FileSystemXmlApplicationContext("src/main/java/com/mkrzesi/springpractice/knight/configuration/knights.xml");
 
         Knight braveKnightOne = context.getBean("braveKnightOne", BraveKnight.class);
-        braveKnightOne.makeQuest();
+        braveKnightOne.knightMakeQuest();
 
-        //Knight braveKnightTwo = context.getBean("braveKnightTwo", BraveKnight.class);
-        //braveKnightTwo.makeQuest();
+        /*Knight braveKnightTwo = context.getBean("braveKnightTwo", BraveKnight.class);
+        braveKnightTwo.makeQuest();
 
-        //Knight cowardKnight = context.getBean("cowardKnight", CowardKnight.class);
-        //cowardKnight.makeQuest();
+        Knight cowardKnight = context.getBean("cowardKnight", CowardKnight.class);
+        cowardKnight.makeQuest();*/
     }
 }
