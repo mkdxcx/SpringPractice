@@ -12,6 +12,8 @@ public class Main {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\knight\\configuration\\");
 
+        Minstrel minstrel = context.getBean(Minstrel.class);
+
         Knight braveKnightOne = context.getBean("braveKnightOne",BraveKnight.class);
         braveKnightOne.makeQuest();
 
