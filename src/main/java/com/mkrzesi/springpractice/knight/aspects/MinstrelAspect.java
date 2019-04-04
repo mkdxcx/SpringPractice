@@ -12,7 +12,7 @@ public class MinstrelAspect {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("execution(* com.mkrzesi.springpractice.knight.business.*(..))")
+    @Pointcut("execution(public void src.main.java.com.mkrzesi.springpractice.knight.business.*.makeQuest())")
     private void sing(){}
 
     @Before("sing()")
