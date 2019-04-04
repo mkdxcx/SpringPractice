@@ -1,8 +1,9 @@
 package com.mkrzesi.springpractice.knight.configuration;
 
-import com.mkrzesi.springpractice.knight.aspects.Minstrel;
+import com.mkrzesi.springpractice.knight.aspects.MinstrelAspect;
 import com.mkrzesi.springpractice.knight.business.*;
 import com.mkrzesi.springpractice.knight.interfaces.Knight;
+import com.mkrzesi.springpractice.knight.interfaces.Minstrel;
 import com.mkrzesi.springpractice.knight.interfaces.Quest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,7 @@ public class KnightConfiguration {
         return new BraveKnight(rescueQuest());
     }
 
-    @Bean
+    @Bean(name = "cowardKnight")
     public Knight cowardKnight() {
         return new CowardKnight(cowardQuest());
     }
@@ -49,7 +50,7 @@ public class KnightConfiguration {
 
     @Bean
     public Minstrel minstrelAspect(){
-        return new Minstrel();
+        return new MinstrelAspect();
     }
 
 }

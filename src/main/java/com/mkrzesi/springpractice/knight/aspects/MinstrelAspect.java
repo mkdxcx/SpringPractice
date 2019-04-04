@@ -1,5 +1,6 @@
 package com.mkrzesi.springpractice.knight.aspects;
 
+import com.mkrzesi.springpractice.knight.interfaces.Minstrel;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -8,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Aspect
-public class Minstrel {
+public class MinstrelAspect implements Minstrel {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
