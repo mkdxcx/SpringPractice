@@ -1,6 +1,5 @@
 package com.mkrzesi.springpractice.knight.configuration;
 
-import com.mkrzesi.springpractice.knight.aspects.MinstrelAspect;
 import com.mkrzesi.springpractice.knight.business.BraveKnight;
 import com.mkrzesi.springpractice.knight.business.CowardKnight;
 import com.mkrzesi.springpractice.knight.interfaces.Knight;
