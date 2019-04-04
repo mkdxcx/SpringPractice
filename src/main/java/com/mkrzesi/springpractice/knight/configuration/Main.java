@@ -14,9 +14,9 @@ public class Main {
         Knight braveKnightTwo = context.getBean("braveKnightTwo",BraveKnight.class);
         Knight cowardKnight = context.getBean("cowardKnight",CowardKnight.class);
 
-        braveKnightOne.makeQuest();
-        braveKnightTwo.makeQuest();
-        cowardKnight.makeQuest();
+        braveKnightOne.knightMakeQuest();
+        braveKnightTwo.knightMakeQuest();
+        cowardKnight.knightMakeQuest();
 
         context.close();
     }

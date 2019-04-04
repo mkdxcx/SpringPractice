@@ -12,7 +12,7 @@ public class CowardKnight implements Knight {
     }
 
     @Override
-    public void makeQuest() {
+    public void knightMakeQuest() {
         quest.makeQuest();
     }
 }
