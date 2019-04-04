@@ -11,8 +11,6 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\knight\\configuration\\");
 
-        MinstrelAspect minstrelAspect = context.getBean(MinstrelAspect.class);
-
         Knight braveKnightOne = context.getBean("braveKnightOne",BraveKnight.class);
         Knight braveKnightTwo = context.getBean("braveKnightTwo",BraveKnight.class);
         Knight cowardKnight = context.getBean("cowardKnight",CowardKnight.class);
