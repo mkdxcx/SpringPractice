@@ -1,7 +1,9 @@
 package com.mkrzesi.springpractice.knight.configuration;
 
-import com.mkrzesi.springpractice.knight.*;
 import com.mkrzesi.springpractice.knight.aspects.Minstrel;
+import com.mkrzesi.springpractice.knight.business.*;
+import com.mkrzesi.springpractice.knight.interfaces.Knight;
+import com.mkrzesi.springpractice.knight.interfaces.Quest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;

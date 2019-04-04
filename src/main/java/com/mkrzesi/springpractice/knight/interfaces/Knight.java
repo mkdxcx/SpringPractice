@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.knight;
+package com.mkrzesi.springpractice.knight.interfaces;
 
 public interface Knight {
 

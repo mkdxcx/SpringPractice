@@ -1,5 +1,7 @@
 package com.mkrzesi.springpractice.knight;
 
+import com.mkrzesi.springpractice.knight.business.BraveKnight;
+import com.mkrzesi.springpractice.knight.interfaces.Quest;
 import org.junit.Test;
 
 import static org.mockito.Mockito.mock;
