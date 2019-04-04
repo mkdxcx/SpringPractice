@@ -3,7 +3,6 @@ package com.mkrzesi.springpractice.knight.configuration;
 import com.mkrzesi.springpractice.knight.aspects.MinstrelAspect;
 import com.mkrzesi.springpractice.knight.business.*;
 import com.mkrzesi.springpractice.knight.interfaces.Knight;
-import com.mkrzesi.springpractice.knight.interfaces.Minstrel;
 import com.mkrzesi.springpractice.knight.interfaces.Quest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class KnightConfiguration {
 
     Logger logger = LoggerFactory.getLogger(getClass());
@@ -49,7 +48,7 @@ public class KnightConfiguration {
     }
 
     @Bean
-    public Minstrel minstrelAspect(){
+    public MinstrelAspect minstrelAspect(){
         return new MinstrelAspect();
     }
 

@@ -4,7 +4,6 @@ import com.mkrzesi.springpractice.knight.aspects.MinstrelAspect;
 import com.mkrzesi.springpractice.knight.business.BraveKnight;
 import com.mkrzesi.springpractice.knight.business.CowardKnight;
 import com.mkrzesi.springpractice.knight.interfaces.Knight;
-import com.mkrzesi.springpractice.knight.interfaces.Minstrel;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -12,7 +11,7 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\knight\\configuration\\");
 
-        Minstrel minstrelAspect = context.getBean(MinstrelAspect.class);
+        MinstrelAspect minstrelAspect = context.getBean(MinstrelAspect.class);
 
         Knight braveKnightOne = context.getBean("braveKnightOne",BraveKnight.class);
         Knight braveKnightTwo = context.getBean("braveKnightTwo",BraveKnight.class);

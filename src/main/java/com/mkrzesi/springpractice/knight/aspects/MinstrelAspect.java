@@ -1,6 +1,5 @@
 package com.mkrzesi.springpractice.knight.aspects;
 
-import com.mkrzesi.springpractice.knight.interfaces.Minstrel;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -9,11 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Aspect
-public class MinstrelAspect implements Minstrel {
+public class MinstrelAspect {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("execution(* com.mkrzesi.springpractice.knight.business.*.makeQuest())")
+    @Pointcut("execution(* com.mkrzesi.springpractice.knight.business.*(..))")
     private void sing(){}
 
     @Before("sing()")
