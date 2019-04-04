@@ -22,7 +22,7 @@ public class Main {
 
         Knight cowardKnight = context.getBean(CowardKnight.class);
         cowardKnight.makeQuest();
-
+        
         ((AnnotationConfigApplicationContext) context).close();
     }
 }
