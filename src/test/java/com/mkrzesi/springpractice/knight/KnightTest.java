@@ -13,6 +13,6 @@ public class KnightTest {
         Quest mockQuest = mock(Quest.class);
 
         BraveKnight braveKnight = new BraveKnight(mockQuest);
-        braveKnight.makeQuest();
+        braveKnight.knightMakeQuest();
     }
 }
