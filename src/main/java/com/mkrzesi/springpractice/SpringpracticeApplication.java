@@ -13,6 +13,5 @@ public class SpringpracticeApplication {
 		SpringApplication.run(SpringpracticeApplication.class, args);
 
 		ApplicationContext context = new AnnotationConfigApplicationContext();
-
 	}
 }
