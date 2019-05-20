@@ -1,6 +1,5 @@
 package com.mkrzesi.springpractice;
 
-import com.mkrzesi.springpractice.soundsystem.CDplayer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
