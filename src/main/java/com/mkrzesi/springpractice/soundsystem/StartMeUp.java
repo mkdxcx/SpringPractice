@@ -1,5 +1,6 @@
 package com.mkrzesi.springpractice.soundsystem;
 
+import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

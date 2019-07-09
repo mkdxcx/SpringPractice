@@ -1,5 +1,8 @@
 package com.mkrzesi.springpractice.soundsystem;
 
+import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
+import com.mkrzesi.springpractice.soundsystem.Interfaces.MediaPlayer;
+
 public class CDplayer implements MediaPlayer {
 
     private CompactDisc cd;
