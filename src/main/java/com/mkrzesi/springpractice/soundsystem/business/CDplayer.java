@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.soundsystem;
+package com.mkrzesi.springpractice.soundsystem.business;
 
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.MediaPlayer;

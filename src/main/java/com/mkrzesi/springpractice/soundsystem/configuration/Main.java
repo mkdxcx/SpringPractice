@@ -1,14 +1,21 @@
 package com.mkrzesi.springpractice.soundsystem.configuration;
 
-import com.mkrzesi.springpractice.soundsystem.SgtPeppers;
+import com.mkrzesi.springpractice.soundsystem.business.CDplayer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
-    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\soundsystem\\configuration\\");
+    public static void main(String[] args) {
 
-    SgtPeppers sgtPeppers = context.getBean("sgtPeppers", SgtPeppers.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\soundsystem\\configuration\\");
 
+        CDplayer cdPlayerOne = context.getBean("cdPlayerWithSgtPeppersBean", CDplayer.class);
+        CDplayer cDplayerTwo = context.getBean("cdPlayerWithStartMeUp", CDplayer.class);
+
+        cdPlayerOne.play();
+        cDplayerTwo.play();
+
+    }
 
 
 }
