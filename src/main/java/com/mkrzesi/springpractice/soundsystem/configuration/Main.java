@@ -10,11 +10,11 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com\\mkrzesi\\springpractice\\soundsystem\\configuration\\");
 
         CDplayer cdPlayerOne = context.getBean("cdPlayerWithSgtPeppersBean", CDplayer.class);
-        CDplayer cDplayerTwo = context.getBean("cdPlayerWithStartMeUp", CDplayer.class);
+        CDplayer cdPlayerTwo = context.getBean("cdPlayerWithStartMeUp", CDplayer.class);
+        CDplayer cdPlayerThree = context.getBean("cdPlayerWithBlankDisc", CDplayer.class);
 
         cdPlayerOne.play();
-        cDplayerTwo.play();
+        cdPlayerTwo.play();
+        cdPlayerThree.play();
     }
-
-
 }
