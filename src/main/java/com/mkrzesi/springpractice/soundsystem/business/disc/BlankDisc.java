@@ -1,4 +1,4 @@
-package com.mkrzesi.springpractice.soundsystem.business;
+package com.mkrzesi.springpractice.soundsystem.business.disc;
 
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import org.slf4j.Logger;
@@ -14,16 +14,22 @@ public class BlankDisc implements CompactDisc {
     private String artist;
     private List<String> tracks;
 
-    public BlankDisc(String title, String artist, List<String> tracks){
-        this.title = title;
+    public BlankDisc(String artist, String title, List<String> tracks){
         this.artist = artist;
+        this.title = title;
         this.tracks = tracks;
     }
 
-    public void play(){
+    public void play() {
         logger.info("Now playing: " + artist + ", title: " + title);
-        for (String track : tracks){
-            logger.info("Track: " + track);
+
+        if (tracks != null) {
+            logger.info("Number of tracks: " + tracks.size());
+            for (String track : tracks) {
+                logger.info("Track: " + track);
+            }
+        } else {
+            logger.info("List of tracks is empty");
         }
     }
 

@@ -2,7 +2,13 @@ package com.mkrzesi.springpractice.soundsystem.configuration;
 
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.MediaPlayer;
-import com.mkrzesi.springpractice.soundsystem.business.*;
+import com.mkrzesi.springpractice.soundsystem.Interfaces.Tape;
+import com.mkrzesi.springpractice.soundsystem.business.disc.BlankDisc;
+import com.mkrzesi.springpractice.soundsystem.business.disc.SgtPeppers;
+import com.mkrzesi.springpractice.soundsystem.business.disc.StartMeUp;
+import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
+import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
+import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +18,16 @@ import java.util.List;
 @Configuration
 public class CDplayerConfiguration {
 
+    @Bean(name = "discographyOne")
+    public List<String> discographyOne(){
+        List<String> tracks = new ArrayList<>();
+        tracks.add("Blank1Track1");
+        tracks.add("Blank1Track2");
+        tracks.add("Blank1Track3");
+        return tracks;
+    }
+
+    //inject by constructor
     @Bean(name = "sgtPeppers")
     public CompactDisc sgtPeppers() {
         return new SgtPeppers();
@@ -24,16 +40,7 @@ public class CDplayerConfiguration {
 
     @Bean(name = "blankOne")
     public CompactDisc blankDisc(){
-        return new BlankDisc("BlankTitle1","BlankArtist1", discography());
-    }
-
-    @Bean(name = "discographyOne")
-    public List<String> discography(){
-        List<String> discography = new ArrayList<>();
-        discography.add("Track1Title");
-        discography.add("Track2Title");
-        discography.add("Track3Title");
-        return discography;
+        return new BlankDisc("BlankArtist","BlankTitle", discographyOne());
     }
 
     @Bean(name = "cdPlayerWithSgtPeppersBean")
@@ -44,4 +51,15 @@ public class CDplayerConfiguration {
 
     @Bean(name = "cdPlayerWithBlankDisc")
     public MediaPlayer cdPlayerWithBlankDisc(){return new CDplayer(blankDisc());}
+
+    //inject by properties
+    @Bean(name = "magneticTape")
+    public Tape tape(){
+        return new MagneticTape();
+    }
+
+    @Bean(name = "tapePlayer")
+    public TapePlayer tapePlayer(){
+        return new TapePlayer();
+    }
 }
