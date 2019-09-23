@@ -3,6 +3,7 @@ package com.mkrzesi.springpractice.soundsystem.configuration;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.MediaPlayer;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.Tape;
+import com.mkrzesi.springpractice.soundsystem.apect.VolumeController;
 import com.mkrzesi.springpractice.soundsystem.business.disc.BlankDisc;
 import com.mkrzesi.springpractice.soundsystem.business.disc.SgtPeppers;
 import com.mkrzesi.springpractice.soundsystem.business.disc.StartMeUp;
@@ -11,11 +12,13 @@ import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
+@EnableAspectJAutoProxy
 public class CDplayerConfiguration {
 
     @Bean(name = "discographyOne")
@@ -62,4 +65,8 @@ public class CDplayerConfiguration {
     public TapePlayer tapePlayer(){
         return new TapePlayer();
     }
+
+    //aspect
+    @Bean(name = "volumeAspect")
+    public VolumeController volumeController(){return new VolumeController();}
 }

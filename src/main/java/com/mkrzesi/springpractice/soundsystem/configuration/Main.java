@@ -15,10 +15,10 @@ public class Main {
 
         CDplayer cdPlayerOne = context.getBean("cdPlayerWithSgtPeppersBean", CDplayer.class);
         CDplayer cdPlayerTwo = context.getBean("cdPlayerWithStartMeUp", CDplayer.class);
-        //BlankDisc cdPlayerThree = context.getBean("cdPlayerWithBlankDisc", BlankDisc.class);
-        //cdPlayerOne.play();
-        //cdPlayerTwo.play();
-        //cdPlayerThree.play();
+        CDplayer cdPlayerThree = context.getBean("cdPlayerWithBlankDisc", CDplayer.class);
+        cdPlayerOne.play();
+        cdPlayerTwo.play();
+        cdPlayerThree.play();
 
         MagneticTape magneticTape = context.getBean("magneticTape", MagneticTape.class);
         magneticTape.setArtist("magnetoArtist");

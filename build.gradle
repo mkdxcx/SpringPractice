@@ -25,6 +25,9 @@ repositories {
 
 
 dependencies {
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.4'
+
 	implementation('org.springframework.boot:spring-boot-starter')
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')
