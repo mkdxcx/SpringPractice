@@ -11,6 +11,8 @@ import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
 import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
 import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -21,6 +23,8 @@ import java.util.List;
 @Configuration
 @EnableAspectJAutoProxy
 public class CDplayerConfiguration {
+
+    Logger logger = LoggerFactory.getLogger(getClass());
 
     @Bean(name = "discographyOne")
     public List<String> discographyOne(){
@@ -67,12 +71,12 @@ public class CDplayerConfiguration {
         return new TapePlayer();
     }
 
-    //aspect
+/*    //aspect
     @Bean(name = "volumeAspect")
-    public VolumeController volumeController(){return new VolumeController();}
+    public VolumeController volumeController(){return new VolumeController();}*/
 
-    @Pointcut("execution(* play(..))")
+    @Pointcut("execution(* play())")
     public void changeVolume(){
-        volumeController().volumeUp();
+       // volumeController().volumeUp();
     }
 }
