@@ -10,6 +10,7 @@ import com.mkrzesi.springpractice.soundsystem.business.disc.StartMeUp;
 import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
 import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -69,4 +70,9 @@ public class CDplayerConfiguration {
     //aspect
     @Bean(name = "volumeAspect")
     public VolumeController volumeController(){return new VolumeController();}
+
+    @Pointcut("execution(* play(..))")
+    public void changeVolume(){
+        volumeController().volumeUp();
+    }
 }
