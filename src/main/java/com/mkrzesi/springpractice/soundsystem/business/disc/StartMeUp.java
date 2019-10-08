@@ -11,7 +11,7 @@ public class StartMeUp implements CompactDisc {
     private String title = "Start me up";
     private String artist = "The Rolling Stones";
 
-    public void play() {
+    public void playCd() {
         logger.info("Now playing " + title + "artist: " + artist);
     }
 }

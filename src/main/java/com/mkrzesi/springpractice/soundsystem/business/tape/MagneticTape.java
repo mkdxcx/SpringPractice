@@ -12,7 +12,7 @@ public class MagneticTape implements Tape {
     private String artist;
 
     @Override
-    public void play() {
+    public void playTape() {
         logger.info("Now playing magnetic tape " + title + ", " + artist);
     }
 

@@ -12,6 +12,6 @@ public class TapePlayer {
     }
 
     public void play(){
-        magneticTape.play();
+        magneticTape.playTape();
     }
 }

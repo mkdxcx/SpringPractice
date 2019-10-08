@@ -20,7 +20,7 @@ public class BlankDisc implements CompactDisc {
         this.tracks = tracks;
     }
 
-    public void play() {
+    public void playCd() {
         logger.info("Now playing: " + artist + ", title: " + title);
 
         if (tracks != null) {

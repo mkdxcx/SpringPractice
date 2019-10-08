@@ -11,7 +11,7 @@ public class SgtPeppers implements CompactDisc {
     private String title = "Sgt. Pepper's Lonely Hearts Club Band";
     private String artist = "The Beatles";
 
-    public void play() {
+    public void playCd() {
         logger.info("Now playing " + title + "artist: " + artist);
     }
 }

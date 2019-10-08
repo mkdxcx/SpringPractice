@@ -11,5 +11,5 @@ public class CDplayer implements MediaPlayer {
         this.cd = cd;
     }
 
-    public void play() { cd.play(); }
+    public void play() { cd.playCd(); }
 }
