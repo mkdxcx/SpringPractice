@@ -10,7 +10,6 @@ import com.mkrzesi.springpractice.soundsystem.business.disc.StartMeUp;
 import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
 import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
-import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
+@EnableAspectJAutoProxy
 public class CDplayerConfiguration {
 
     Logger logger = LoggerFactory.getLogger(getClass());

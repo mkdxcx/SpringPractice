@@ -1,12 +1,12 @@
 package com.mkrzesi.springpractice.soundsystem.configuration;
 
-import com.mkrzesi.springpractice.soundsystem.Interfaces.Tape;
-import com.mkrzesi.springpractice.soundsystem.apect.VolumeController;
-import com.mkrzesi.springpractice.soundsystem.business.disc.BlankDisc;
 import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
 import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+@SpringBootApplication
 
 public class Main {
 
