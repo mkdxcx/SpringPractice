@@ -5,8 +5,11 @@ import com.mkrzesi.springpractice.soundsystem.business.disc.BlankDisc;
 import com.mkrzesi.springpractice.soundsystem.business.player.CDplayer;
 import com.mkrzesi.springpractice.soundsystem.business.player.TapePlayer;
 import com.mkrzesi.springpractice.soundsystem.business.tape.MagneticTape;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
+@EnableAspectJAutoProxy
 public class Main {
 
     public static void main(String[] args) {

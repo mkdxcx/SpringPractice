@@ -12,7 +12,7 @@ public class VolumeController {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("execution(* *.play())")
+    @Pointcut("execution(* com.mkrzesi.springpractice.soundsystem.business.player.*.play())")
     public void changeVolume(){}
 
     @Before("changeVolume()")
