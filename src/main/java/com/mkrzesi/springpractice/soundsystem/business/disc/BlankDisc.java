@@ -3,11 +3,9 @@ package com.mkrzesi.springpractice.soundsystem.business.disc;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 public class BlankDisc implements CompactDisc {
 
     Logger logger = LoggerFactory.getLogger(getClass());
@@ -16,7 +14,7 @@ public class BlankDisc implements CompactDisc {
     private String artist;
     private List<String> tracks;
 
-    public BlankDisc(String artist, String title, List<String> tracks){
+    public BlankDisc(String artist, String title, List<String> tracks) {
         this.artist = artist;
         this.title = title;
         this.tracks = tracks;

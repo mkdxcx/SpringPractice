@@ -3,9 +3,7 @@ package com.mkrzesi.springpractice.soundsystem.business.tape;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.Tape;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
-@Component
 public class MagneticTape implements Tape {
 
     Logger logger = LoggerFactory.getLogger(getClass());
