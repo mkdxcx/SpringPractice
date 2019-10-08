@@ -71,13 +71,6 @@ public class CDplayerConfiguration {
         return new TapePlayer();
     }
 
-/*    //aspect
     @Bean(name = "volumeAspect")
     public VolumeController volumeController(){return new VolumeController();}
-
-    @Pointcut("execution(* *play(..))")
-    public void changeVolume(){
-        volumeController().volumeUp();
-        volumeController().volumeDown();
-    }*/
 }
