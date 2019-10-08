@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.1.0.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -20,17 +20,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 
 dependencies {
-	// https://mvnrepository.com/artifact/org.aspectj/aspectjrt
-	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.4'
-	//compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
-	implementation('org.springframework.boot:spring-boot-starter')
-	runtimeOnly('org.springframework.boot:spring-boot-devtools')
-	compileOnly('org.projectlombok:lombok')
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter',
+            'org.springframework.boot:spring-boot-starter-aop')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
 }

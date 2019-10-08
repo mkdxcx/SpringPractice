@@ -3,9 +3,11 @@ package com.mkrzesi.springpractice.soundsystem.business.disc;
 import com.mkrzesi.springpractice.soundsystem.Interfaces.CompactDisc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class BlankDisc implements CompactDisc {
 
     Logger logger = LoggerFactory.getLogger(getClass());

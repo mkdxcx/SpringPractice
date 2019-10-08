@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
+@EnableAspectJAutoProxy
 public class CDplayerConfiguration {
 
     Logger logger = LoggerFactory.getLogger(getClass());
